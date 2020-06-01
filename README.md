@@ -4,9 +4,9 @@
 
 ## 目录说明
 
--  mobile discuz掌上论坛插件
--   wechat 原生小程序源码
--   unidz  多端小程序源码
+-  mobile：discuz掌上论坛插件
+-  dzmini：原生小程序源码
+-  dzmini_uni：多端小程序源码
 
 ## 使用说明
 
@@ -14,9 +14,10 @@
 2. 把mobile目录覆盖discuz网站的source/plugin/mobile目录
 3. 进入论坛后台，进入应用，找到掌上论坛插件并启用, 点击更新即可
 4. 在discuz后台点击全局——手机访问——开启手机访问及注册登录
-5. 修改小程序源码wechat下的config配置文件，将域名换成您网站域名
+5. 修改小程序源码dzmini下的config.js配置文件，将域名换成您网站域名
 6. 测试没问题 提交上传审核即可
- 
+7.  dzmini_uni需使用uniapp的工具进行编译，目前还有问题
+
 ## 演示小程序
 
 ![](https://www.minapper.com/doc/server/../Public/Uploads/2020-06-01/5ed48e863f86c.jpg)
