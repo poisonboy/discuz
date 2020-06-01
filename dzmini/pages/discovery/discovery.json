@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "萌宠论坛",
+  "onReachBottomDistance": 150,
+  "enablePullDownRefresh": true,
+
+  "navigationBarBackgroundColor": "#FFD100"
+ 
+}

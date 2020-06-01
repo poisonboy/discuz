@@ -1,0 +1,103 @@
+<!--pages/discovery/discovery.wxml-->
+<import src="../common_temp/audio_player.wxml" />
+ 
+<view class="containView">
+	<scroll-view scroll-x class="bg-yellow  cu-bar">
+		<view class="cu-avatar round" style="background-image:url({{userAvatar}}+5);"></view>
+		<view class="bg-yellow nav text-center ">
+			<view class="cu-item {{0==currentTab?'text-white cur':''}}" bindtap="switchNav" data-current="0">
+				<text class="cuIcon-camerafill"></text> 最新
+			</view>
+			<view class="cu-item {{1==currentTab?'text-white cur':''}}" bindtap="switchNav" data-current="1">
+				<text class="cuIcon-upstagefill"></text> 精选
+			</view>
+		</view>
+
+	</scroll-view>
+
+
+	<view class='messageList borderShowdow'>
+
+
+		<block wx:for="{{datalist}}" wx:for-index="cellIdx" wx:for-item="cellItem" wx:key="cellIdx">
+			<view class='classCell' id="{{cellIdx}}" bindtap='cellClick'>
+				<view>
+					<image class='class-cell-avatar' src="{{cellItem.author?cellItem.avatar:(userAvatar+'0')}}"></image>
+				</view>
+
+				<view class='class-cell-contentView'>
+					<view class='username'>
+						{{member_nickname?member_nickname:(cellItem.author?cellItem.author:'匿名')}}
+					</view>
+					<view class='message'><text class="special" wx:if="{{cellItem.special != 0 && cellItem.special != 2 && cellItem.special != 5}}">
+      <block wx:if="{{cellItem.special==1}}">投票</block>
+      <block wx:if="{{cellItem.special==2}}">商品</block>
+      <block wx:if="{{cellItem.special==3}}">悬赏</block>
+      <block wx:if="{{cellItem.special==4}}">活动</block>
+      <block wx:if="{{cellItem.special==5}}">辩论</block>
+      </text>{{cellItem.subject}}</view>
+					<wxs module="attCount">
+						var onlyOneImg = function(cellItem) {
+							return cellItem.imageA.length == 1 && cellItem.videoA.length == 0 ? true : false;
+						}
+						var onlyOneVideo = function(cellItem) {
+							return cellItem.videoA.length == 1 && cellItem.imageA.length == 0 ? true : false;
+						}
+						module.exports = {
+							onlyImg: onlyOneImg,
+							onlyVideo: onlyOneVideo,
+						};
+					</wxs>
+					<view class="attachementView {{attCount.onlyVideo(cellItem)?'singleVideo':''}}" wx:if="{{cellItem.attachlist.length > 0}}" catchtap="{{attCount.onlyVideo(cellItem)?'clickVideo':''}}" id="{{attCount.onlyVideo(cellItem)?cellItem.videoA[0].attachment:''}}">
+
+						<block wx:for="{{cellItem.imageA}}" wx:for-index="aidx" wx:for-item="attItem" wx:key="aid" wx:if="{{aidx < (cellItem.videoA.length > 0 ? 8 : 9)}}">
+							<image class="attachement {{attCount.onlyImg(cellItem)?'singleAtt':''}}" mode="{{attCount.onlyImg(cellItem)?'widthFix':'aspectFill'}}" src="{{attItem.thumb}} " id="{{aidx}}" data-cellindex="{{cellIdx}}" catchtap="lookImage"></image>
+						</block>
+
+						<block wx:for="{{cellItem.videoA}}" wx:for-index="aidx" wx:for-item="video" wx:key="aid" wx:if="{{aidx < 1}}">
+							<image catchtap='clickVideo' id="{{video.attachment}}" class='attachement' src="https://mc.wpnicer.com/source/plugin/mobile/template/image/xiaochengxu/minimg/videoPlace.png"></image>
+						</block>
+
+						<block wx:if="{{cellItem.audioA}}">
+							<block wx:for="{{cellItem.audioA}}" wx:for-index="aid" wx:for-item="audio" wx:key="aid">
+								<template is="audio_player" data='{{...audio.toolUse}}' />
+							</block>
+						</block>
+
+					</view>
+					<rich-text class='class-cell-time' nodes="{{cellItem.dateline}}"></rich-text>
+					<view class='toolRight'>
+						<view class='shareHidden borderShowdow' wx:if="{{cellItem.shareshow == 1}}">
+							<button open-type='share' plain='true' catchtap='listShare' id='{{cellIdx}}'>
+								<image class='shareIcon' src="https://mc.wpnicer.com/source/plugin/mobile/template/image/xiaochengxu/minimg/workshare.png"></image>
+							</button>
+							<button plain='true' catchtap='disVoice' id='{{cellIdx}}'>
+								<image class='shareIcon' src="https://mc.wpnicer.com/source/plugin/mobile/template/image/xiaochengxu/minimg/workvoice.png"></image>
+							</button>
+						</view>
+						<image src='' class='discIcon' src="https://mc.wpnicer.com/source/plugin/mobile/template/image/xiaochengxu/minimg/cpostmessage.png" catchtap='discClick' data-tid='{{cellItem.tid}}' id="{{cellIdx}}"></image>
+					</view>
+				</view>
+			</view>
+		</block>
+		<view class='emptyView' hidden="{{!(datalist.length == 0)}}">
+			<view style='width:100%;height:10rpx'></view>
+			<image src='https://mc.wpnicer.com/source/plugin/mobile/template/image/xiaochengxu/minimg/emptyIcon.png'></image>
+			<view class='emptyMsg'>
+				<block wx:if="{{currentTab==0}}">
+					还没有内容被推荐
+				</block>
+				<block wx:else>
+					最近没有新内容推荐
+				</block>
+				<!-- 赶紧去<text catchtap='postEnter'>发布</text>吧 -->
+			</view>
+		</view>
+	</view>
+	<view class='noMoreView' hidden="{{!noMore}}">
+		别再用力了，你已经滑到底啦
+	</view>
+
+		<!--<video id='detailVideo' class='{{fullScreen?"show":"hide"}}' autoplay='{{true}}' bindplay="playVideo" bindfullscreenchange="fullScreenChange" src="{{currentVideo}}">
+	</video>-->
+</view>

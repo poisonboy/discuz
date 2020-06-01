@@ -1,0 +1,81 @@
+ 
+
+
+.mc_forum_subarea {
+  margin-bottom: 10px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mc_forum_head {
+   
+  background: linear-gradient(top, #fff, #f4f4f4);
+  line-height: 20px;
+  padding: 3px 0;
+  font-size: 14px;
+  color: #4C4C4C;
+  border-bottom: solid 1px #f0f0f0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+ 
+
+ 
+
+.mc_forum_head text {
+  display: block;
+  margin: 0 31px 0 10px;
+  font-size: 16px;
+  color: #4C4C4C;
+  text-decoration: none;
+ 
+  font-weight: 400;
+}
+
+.mc_forum_unit {
+  background: #fff;
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  border: none !important;
+  border-radius: 0;
+}
+
+.mc_forum_unit li {
+  float: left;
+  width: 50%;
+  height: 50px;
+  line-height: 26px;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 0;
+}
+
+.mc_forum_unit li a {
+  padding: 0;
+}
+
+.mc_forum_unit li .mc_forumicon,
+.mc_forum_unit li .mc_forumicon img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.mc_forum_unit li h2 {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mc_forum_unit li p {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #bbb;
+}

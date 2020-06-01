@@ -1,0 +1,213 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.1",
+	"appid": "wxc826ee394650ae73",
+	"projectname": "%E8%90%8C%E5%AE%A0%E8%AE%BA%E5%9D%9B",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 12,
+			"list": [
+				{
+					"id": -1,
+					"name": "版块",
+					"pathName": "pages/forum/forum",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "版块列表",
+					"pathName": "pages/forumdisplay/forumdisplay",
+					"query": "fid=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": " 我的帖子",
+					"pathName": "pages/mine_work/mine_work",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "圈子",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动详情",
+					"pathName": "pages/activity_detail/activity_detail",
+					"query": "tid=321",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "转让",
+					"pathName": "pages/admin_setting/admin_setting",
+					"query": "fid=109&type=giveup",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "发投票",
+					"pathName": "pages/post_question/post_question",
+					"query": "fid=94",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "发活动",
+					"pathName": "pages/activity_post/activity_post",
+					"query": "fid=94",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "帖子列表",
+					"pathName": "pages/forumdisplay/forumdisplay",
+					"query": "fid=94",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "悬赏详情",
+					"pathName": "pages/question_answer_detail/question_answer_detail",
+					"query": "tid=387",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定管理",
+					"pathName": "pages/bound_manage/bound_manage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/discovery/discovery",
+					"pathName": "pages/discovery/discovery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/class_setting/class_setting",
+					"pathName": "pages/class_setting/class_setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/class_rank/class_rank",
+					"pathName": "pages/class_rank/class_rank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/more_user/more_user",
+					"pathName": "pages/more_user/more_user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/questionnaire/questionnaire",
+					"pathName": "pages/questionnaire/questionnaire",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

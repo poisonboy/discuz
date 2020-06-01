@@ -1,0 +1,12 @@
+
+              var onlyOneImg = function(cellItem) {
+                return cellItem.imageA.length == 1 && cellItem.videoA.length == 0 ? true : false;
+              }
+              var onlyOneVideo = function(cellItem) {
+                return cellItem.videoA.length == 1 && cellItem.imageA.length == 0 ? true : false;
+              }
+              module.exports = {
+                onlyImg: onlyOneImg,
+                onlyVideo: onlyOneVideo,
+              };
+            

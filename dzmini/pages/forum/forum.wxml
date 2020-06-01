@@ -1,0 +1,32 @@
+ 
+<block wx:for="{{catlist}}" wx:key='cat'>
+	<view class="cu-bar bg-white solid-bottom margin-top" >
+		<view class="action">
+			<text class="cuIcon-title text-yellow "></text> {{item.name}}
+		</view>
+	</view>
+	<view class="cu-list menu-avatar" wx:for="{{item.forums}}" wx:key='forum' wx:for-item="forum" id="{{forum.fid}}">
+
+		<view class="cu-item" bindtap='toFourmdisplay' wx:for-item="forum" id="{{forum.fid}}">
+			<view class="cu-avatar round lg" style="background-image:url({{forum.icon}} );">
+				<view class="cu-tag badge" wx:if="{{forum.todayposts>0}}">{{forum.todayposts}}</view>
+			</view>
+			<view class="content">
+				<view class="text-grey">
+					<text class="text-cut">{{forum.name}}</text>
+					<view class="cu-tag round bg-yellow sm" wx:if="{{forum.threads>3}}">热门</view>
+				</view>
+				<view class="text-gray text-sm flex">
+					<text class="text-cut">{{forum.description}}</text>
+				</view>
+			</view>
+			<view class="action">
+				<view class="text-grey text-xs">帖数：{{forum.threads}}</view>
+				 
+			</view>
+		</view>
+
+
+
+	</view>
+</block>

@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<form catchsubmit="formSubmit">
+	<view>
+
+		<view class="textArea">
+			<view class='logo'>萌宠论坛</view>
+			<view class='bottomLine'>
+				<input class="weui-input" name="username" bindchange='inputNameChange' value='{{username}}' placeholder="账号" />
+			</view>
+			<view class='bottomLine'>
+				<input class="weui-input" type="password" name="password" placeholder="密码" />
+			</view>
+			<view class='bottomLine viewflex' wx:if="{{imageSrc}}">
+				<input class="weui-input" name="seccodeverify" placeholder="验证码" />
+				<image class='secodeImg' mode='aspectFit' src='{{imageSrc}}' catchtap='downSeccode'></image>
+			</view>
+	 
+			<view class="cu-bar btn-group">
+				<button class="cu-btn bg-grey shadow-blur round" bindtap='tohome'>随便看看</button>
+				<button class="cu-btn bg-yellow shadow-blur round" type="primary" formType="submit">登录</button>
+			</view>
+			<view class="register-v" bindtap='toRegister'>
+				
+				<view class="register-tip">您需要登陆后才可以查看附件及互动，还没有论坛账号?立即<text class="register-tiptext">注册</text></view>
+			</view>
+
+		</view>
+	</view>
+</form>

@@ -1,0 +1,293 @@
+{
+	"pages": [
+		{
+			"path": "pages/discovery/discovery",
+			"style": {
+				"navigationBarTitleText": "萌宠论坛",
+				"onReachBottomDistance": 150,
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#FFD100"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/create_class/create_class",
+			"style": {
+				"navigationBarTitleText": "创建圈子"
+			}
+		},
+		{
+			"path": "pages/search_class/search_class",
+			"style": {
+				"navigationBarTitleText": "创建圈子"
+			}
+		},
+		{
+			"path": "pages/post_thread/post_thread",
+			"style": {
+				"navigationBarTitleText": "发布帖子"
+			}
+		},
+		{
+			"path": "pages/class_setting/class_setting",
+			"style": {
+				"navigationBarTitleText": "圈子信息"
+			}
+		},
+		{
+			"path": "pages/admin_setting/admin_setting",
+			"style": {}
+		},
+		{
+			"path": "pages/class_rank/class_rank",
+			"style": {
+				"navigationBarTitleText": "排行榜"
+			}
+		},
+		{
+			"path": "pages/user_audit/user_audit",
+			"style": {
+				"navigationBarTitleText": "圈子管理"
+			}
+		},
+		{
+			"path": "pages/user_class_setting/user_class_setting",
+			"style": {
+				"navigationBarTitleText": "圈子资料设置"
+			}
+		},
+		{
+			"path": "pages/more_user/more_user",
+			"style": {}
+		},
+		{
+			"path": "pages/thread_detail/thread_detail",
+			"style": {
+				"navigationBarTitleText": "帖子详情",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 150
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/mine_modify/mine_modify",
+			"style": {
+				"navigationBarTitleText": "修改资料"
+			}
+		},
+		{
+			"path": "pages/mine_favorite/mine_favorite",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"onReachBottomDistance": 150,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine_work/mine_work",
+			"style": {
+				"navigationBarTitleText": "我的主题",
+				"onReachBottomDistance": 150,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/create_school/create_school",
+			"style": {
+				"navigationBarTitleText": "创建学校"
+			}
+		},
+		{
+			"path": "pages/create_city/create_city",
+			"style": {
+				"navigationBarTitleText": "创建城市"
+			}
+		},
+		{
+			"path": "pages/create_area/create_area",
+			"style": {
+				"navigationBarTitleText": "创建地区"
+			}
+		},
+		{
+			"path": "pages/class_tag/class_tag",
+			"style": {
+				"navigationBarTitleText": "分类管理"
+			}
+		},
+		{
+			"path": "pages/questionnaire/questionnaire",
+			"style": {
+				"navigationBarTitleText": "问卷",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/questionnaire_detail/questionnaire_detail",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "问卷调查",
+				"onReachBottomDistance": 150
+			}
+		},
+		{
+			"path": "pages/post_question/post_question",
+			"style": {
+				"navigationBarTitleText": "发起投票"
+			}
+		},
+		{
+			"path": "pages/vote_list/vote_list",
+			"style": {
+				"navigationBarTitleText": "问卷详情"
+			}
+		},
+		{
+			"path": "pages/vote_optiondetail/vote_optiondetail",
+			"style": {
+				"navigationBarTitleText": "选项详情"
+			}
+		},
+		{
+			"path": "pages/question_answer/question_answer",
+			"style": {}
+		},
+		{
+			"path": "pages/question_answer_post/question_answer_post",
+			"style": {
+				"navigationBarTitleText": "提问",
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/question_answer_detail/question_answer_detail",
+			"style": {
+				"navigationBarTitleText": "问答",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/question_type/question_type",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/activity/activity",
+			"style": {
+				"navigationBarTitleText": "活动报名",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/activity_post/activity_post",
+			"style": {
+				"navigationBarTitleText": "发起活动"
+			}
+		},
+		{
+			"path": "pages/activity_detail/activity_detail",
+			"style": {
+				"navigationBarTitleText": "活动详情",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/activity_signup/activity_signup",
+			"style": {
+				"navigationBarTitleText": "报名详情",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/forum/forum",
+			"style": {
+				"navigationBarTitleText": "版块",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/forumdisplay/forumdisplay",
+			"style": {
+				"navigationBarTitleText": "帖子列表",
+				"onReachBottomDistance": 150,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/bound_manage/bound_manage",
+			"style": {
+				"navigationBarTitleText": "绑定管理"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#FFD100",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/discovery/discovery",
+				"iconPath": "/static/image/home.png",
+				"selectedIconPath": "/static/image/home_fill.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/forum/forum",
+				"iconPath": "/static/image/form.png",
+				"selectedIconPath": "/static/image/form_fill.png",
+				"text": "版块"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/image/discover.png",
+				"selectedIconPath": "/static/image/discover_fill.png",
+				"text": "群组"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "/static/image/my.png",
+				"selectedIconPath": "/static/image/my_fill.png",
+				"text": "我的"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"globalStyle": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#f8f8f8",
+		"navigationBarTitleText": "萌宠论坛",
+		"navigationBarTextStyle": "black"
+	},
+	"subPackages": []
+}
