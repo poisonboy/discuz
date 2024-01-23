@@ -26,7 +26,7 @@
 3.  目前还有问题，需要自行二开，或者删除掉不能用的部分
 
 ## 演示截图
-![微信小程序](https://raw.githubusercontent.com/poisonboy/discuz/master/images/wechat.png)
+![微信小程序](https://github.com/poisonboy/discuz/blob/master/images/18shots_so.jpg?raw=true)
  
 
 
