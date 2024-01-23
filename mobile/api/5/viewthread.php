@@ -13,14 +13,17 @@ if (!defined('IN_MOBILE_API')) {
 $_GET['mod'] = 'viewthread';
 include_once 'forum.php';
 
-class mobile_api {
+class mobile_api
+{
 
-	function common() {
-
+	function common()
+	{
 	}
 
-	function output() {
+	function output()
+	{
 		global $_G, $thread;
+		
 		if ($GLOBALS['hiddenreplies']) {
 			foreach ($GLOBALS['postlist'] as $k => $post) {
 				if (!$post['first'] && $_G['uid'] != $post['authorid'] && $_G['uid'] != $_G['forum_thread']['authorid'] && !$_G['forum']['ismoderator']) {
@@ -52,22 +55,22 @@ class mobile_api {
 		}
 
 		$variable = array(
-		    'thread' => $_G['thread'],
-		    'fid' => $_G['fid'],
-		    'postlist' => array_values(mobile_core::getvalues($GLOBALS['postlist'], array('/^\d+$/'), array('pid', 'tid', 'author', 'first', 'dbdateline', 'dateline', 'username', 'adminid', 'memberstatus', 'authorid', 'username', 'groupid', 'memberstatus', 'status', 'message', 'number', 'memberstatus', 'groupid', 'attachment', 'attachments', 'attachlist', 'imagelist', 'anonymous', 'position', 'rewardfloor', 'replycredit', 'postreview'))),
-		    'allowpostcomment' => $_G['setting']['allowpostcomment'],
-		    'comments' => $GLOBALS['comments'],
-		    'commentcount' => $GLOBALS['commentcount'],
-		    'ppp' => $_G['ppp'],
-		    'setting_rewriterule' => $_G['setting']['rewriterule'],
-		    'setting_rewritestatus' => $_G['setting']['rewritestatus'],
-		    'forum_threadpay' => $_G['forum_threadpay'],
-		    'cache_custominfo_postno' => $_G['cache']['custominfo']['postno'],
+			'thread' => $_G['thread'],
+			'fid' => $_G['fid'],
+			'postlist' => array_values(mobile_core::getvalues($GLOBALS['postlist'], array('/^\d+$/'), array('pid', 'tid', 'author', 'first', 'dbdateline', 'dateline', 'username', 'adminid', 'memberstatus', 'authorid', 'username', 'groupid', 'memberstatus', 'status', 'message', 'number', 'memberstatus', 'groupid', 'attachment', 'attachments', 'attachlist', 'imagelist', 'anonymous', 'position', 'rewardfloor', 'replycredit', 'postreview'))),
+			'allowpostcomment' => $_G['setting']['allowpostcomment'],
+			'comments' => $GLOBALS['comments'],
+			'commentcount' => $GLOBALS['commentcount'],
+			 'ppp' => $GLOBALS['ppp'],
+			'setting_rewriterule' => $_G['setting']['rewriterule'],
+			'setting_rewritestatus' => $_G['setting']['rewritestatus'],
+			'forum_threadpay' => $_G['forum_threadpay'],
+			'cache_custominfo_postno' => $_G['cache']['custominfo']['postno'],
 		);
 
 		if (!empty($GLOBALS['threadsortshow'])) {
 			$optionlist = array();
-			foreach ($GLOBALS['threadsortshow']['optionlist'] AS $key => $val) {
+			foreach ($GLOBALS['threadsortshow']['optionlist'] as $key => $val) {
 				$val['optionid'] = $key;
 				$optionlist[] = $val;
 			}
@@ -81,13 +84,37 @@ class mobile_api {
 			$variable['threadsortshow'] = $threadsortshow;
 		}
 		foreach ($variable['postlist'] as $k => $post) {
+			// 初始化 vids 数组
+			$vids = [];
+
+			// 匹配 [media] 标签并处理
+			$variable['postlist'][$k]['message'] = preg_replace_callback('/\[media[^\]]*\](.*?)\[\/media\]/i', function ($matches) use (&$vids) {
+				// 检查是否是腾讯视频链接并提取视频 ID
+				if (preg_match('/https?:\/\/v\.qq\.com\/x\/page\/([a-z0-9]+)\.html/i', $matches[1], $vidMatches)) {
+					$vids[] = $vidMatches[1];
+				}
+				// 将 [media] 标签转换为 <a> 标签
+				return '';
+			}, $post['message']);
+
+			// 如果有视频 ID，将其添加到帖子信息中
+			if (!empty($vids)) {
+				$variable['postlist'][$k]['vids'] = $vids;
+			}
 
 			//附件处理
-			foreach($post['attachments'] as $aid => $attach) {
-				if($attach['remote']) {
-					$attach['attachmenturl'] = $_G['setting']['ftp']['attachurl'].'forum/'.$attach['attachment'];
+			foreach ($post['attachments'] as $aid => $attach) {
+				if ($attach['remote']) {
+					$attach['attachmenturl'] = $_G['setting']['ftp']['attachurl'] . 'forum/' . $attach['attachment'];
 				} else {
-					$attach['attachmenturl'] = strpos($_G['setting']['attachurl'], 'http') !== false ? $_G['setting']['attachurl'].'forum/'.$attach['attachment'] : $_G['siteurl'].$_G['setting']['attachurl'].'forum/'.$attach['attachment'];
+					$attach['attachmenturl'] = strpos($_G['setting']['attachurl'], 'http') !== false ? $_G['setting']['attachurl'] . 'forum/' . $attach['attachment'] : $_G['siteurl'] . $_G['setting']['attachurl'] . 'forum/' . $attach['attachment'];
+				}
+				// 检查是否是视频类型
+				if ($attach['ext'] == 'mp4') {
+					// 将视频链接添加到 videos 数组
+					$variable['postlist'][$k]['videos'] = [
+						'attachment' => $attach['attachmenturl'] // 视频链接
+					];
 				}
 				$variable['postlist'][$k]['attachments'][$aid] = $attach;
 			}
@@ -145,9 +172,17 @@ class mobile_api {
 			$variable['postlist'][$k]['message'] = preg_replace('/(&nbsp;){2,}/', '', $variable['postlist'][$k]['message']);
 			$variable['postlist'][$k]['dateline'] = strip_tags($post['dateline']);
 			$variable['postlist'][$k]['groupiconid'] = mobile_core::usergroupIconId($post['groupid']);
+           
+			if ($post['first'] != 1) {
+				$variable['postlist'][$k]['message'] = preg_replace('/<br \/>\\r\\n|<br \/>\\n|<br \/>\\r/', "", $variable['postlist'][$k]['message']);
+				$variable['postlist'][$k]['message'] = preg_replace('/(<br \/>)+/', "", $variable['postlist'][$k]['message']);
+			}else{
+
+				$variable['postlist'][$k]['message']   = preg_replace('/<br \/>\\r\\n|<br \/>\\n|<br \/>\\r/', "\r\n", $variable['postlist'][$k]['message']);}
+
 
 			//avatar
-			$variable['postlist'][$k]['avatar'] = avatar($post['authorid'], 'small', true);
+			$variable['postlist'][$k]['avatar'] = $_G['siteurl'] . avatar($post['authorid'], 'small', true);
 		}
 
 		if (!empty($GLOBALS['polloptions'])) {
@@ -205,7 +240,7 @@ class mobile_api {
 		}
 
 		$variable['forum']['password'] = $variable['forum']['password'] ? '1' : '0';
-		foreach($GLOBALS['forum']['threadtypes']['types'] as $typeid => $typename) {
+		foreach ($GLOBALS['forum']['threadtypes']['types'] as $typeid => $typename) {
 			$GLOBALS['forum']['threadtypes']['types'][$typeid] = strip_tags($typename);
 			$GLOBALS['forum']['threadtypes']['dbtypes'][$typeid] = $typename;
 		}
@@ -213,15 +248,18 @@ class mobile_api {
 		mobile_core::result(mobile_core::variable($variable));
 	}
 
-	function _findimg($string) {
+	function _findimg($string)
+	{
 		return preg_replace_callback('/(<img src=\")(.+?)(\".*?\>)/is', array(__CLASS__, 'findimg_callback_parseimg_123'), $string);
 	}
 
-	static function findimg_callback_parseimg_123($matches) {
+	static function findimg_callback_parseimg_123($matches)
+	{
 		return mobile_api::_parseimg($matches[1], $matches[2], $matches[3]);
 	}
 
-	function _parseimg($before, $img, $after) {
+	function _parseimg($before, $img, $after)
+	{
 		$before = stripslashes($before);
 		$after = stripslashes($after);
 		if (!in_array(strtolower(substr($img, 0, 6)), array('http:/', 'https:', 'ftp://'))) {
@@ -230,7 +268,4 @@ class mobile_api {
 		}
 		return $before . $img . $after;
 	}
-
 }
-
-?>
