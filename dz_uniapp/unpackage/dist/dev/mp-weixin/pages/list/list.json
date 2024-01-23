@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "分类",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "nui-list-stick": "/components/niceui/nui-list-stick/nui-list-stick",
+    "nui-list": "/components/niceui/nui-list/nui-list",
+    "nui-nomore": "/components/niceui/nui-nomore/nui-nomore"
+  }
+}

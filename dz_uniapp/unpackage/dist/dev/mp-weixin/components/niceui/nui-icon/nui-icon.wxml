@@ -1,0 +1,1 @@
+<text data-event-opts="{{[['tap',[['handleClick',['$event']]]]]}}" class="{{['nui-icon-class','niceicons','data-v-ffa548e8','nui-icon-'+name]}}" style="{{'color:'+(color||'#999')+';'+('font-size:'+(size+unit)+';')+('font-weight:'+(bold?'bold':'normal')+';')+('margin:'+(margin)+';')}}" bindtap="__e"></text>

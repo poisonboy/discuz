@@ -1,0 +1,91 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "Discuz！Q多端小程序和APP",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=19",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=23",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=14661",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "id=10&name=%E5%85%BC%E8%81%8C%E5%9C%88",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "id=13&name=%E6%95%B0%E7%A0%81%E5%9C%88",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "id=13&name=%E6%95%B0%E7%A0%81%E5%9C%88",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=22",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=14",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/thread/thread",
+          "pathName": "pages/thread/thread",
+          "query": "id=19",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

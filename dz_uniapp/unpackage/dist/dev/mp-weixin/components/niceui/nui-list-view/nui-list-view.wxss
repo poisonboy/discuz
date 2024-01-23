@@ -1,0 +1,52 @@
+
+.nui-list-title.data-v-45cf59e0 {
+	margin-left: 10rpx;
+	font-weight: 700;
+	font-size: 16px;
+	color: var(--black);
+	line-height: 24px;
+}
+.nui-list-content.data-v-45cf59e0 {
+	width: 100%;
+	position: relative;
+}
+.nui-list-content.data-v-45cf59e0::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+ 
+	-webkit-transform: scaleY(0.5) translateZ(0);
+	transform: scaleY(0.5) translateZ(0);
+	-webkit-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	z-index: 2;
+	pointer-events: none;
+}
+.nui-list-content.data-v-45cf59e0::after {
+	content: '';
+	width: 100%;
+	position: absolute;
+ 
+	-webkit-transform: scaleY(0.5) translateZ(0);
+	transform: scaleY(0.5) translateZ(0);
+	-webkit-transform-origin: 0 100%;
+	        transform-origin: 0 100%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.nui-border-top.data-v-45cf59e0::before {
+	border-top: 0;
+}
+.nui-border-bottom.data-v-45cf59e0::after {
+	border-bottom: 0;
+}
+.nui-border-all.data-v-45cf59e0::after {
+	border-bottom: 0;
+}
+.nui-border-all.data-v-45cf59e0::before {
+	border-top: 0;
+}
+

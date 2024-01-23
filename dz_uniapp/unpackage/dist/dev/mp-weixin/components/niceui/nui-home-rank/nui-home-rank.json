@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nui-list": "/components/niceui/nui-list/nui-list",
+    "nui-nomore": "/components/niceui/nui-nomore/nui-nomore"
+  },
+  "component": true
+}

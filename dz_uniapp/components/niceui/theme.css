@@ -1,0 +1,52 @@
+page {
+	/* 主题色 */
+	--base: #2f54eb;
+	--base-light: #d6e4ff;
+	--shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .1);
+	--base-rgb: 47, 84, 235;
+	--base-gradient: linear-gradient(180deg, #2f54eb 18%, #5a80e9 82%);
+	/* 基础色 */
+	--blue: #0d6efd;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #d63384;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #198754;
+	--teal: #20c997;
+	--cyan: #0dcaf0;
+	--gray: #757575;
+
+	--gray-dark: #4f4f4f;
+	--primary: #1266f1;
+	--primary-light: #e1ecfd;
+	--success: #00b74a;
+	--success-light: #c6ffdd;
+	--info: #39c0ed;
+	--info-light: #e1f6fc;
+	--warning: #ffa900;
+	--warning-light: #fff1d6;
+	--danger: #f93154;
+	--danger-light: #fee3e8;
+	--highlight: #fcf8e3;
+	--light: #fbfbfb;
+	--dark: #262626;
+	--white: #fff;
+	--black: #000;
+	--gradient: linear-gradient(180deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0));
+	/* 动画加载时间 */
+	--animate-duration: 1s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+	margin: 0;
+	/* 字体 */
+	font-size: 14px !important;
+	line-height: 20px !important;
+	font-weight: 400 !important;
+	/* 背景 */
+	background-color: var(--light);
+	/* 颜色 */
+	color: var(--gray-dark);
+
+}

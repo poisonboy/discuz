@@ -1,0 +1,1 @@
+<view class="card"><mp-html vue-id="a655e2f4-1" content="{{html}}" bind:__l="__l"></mp-html></view>

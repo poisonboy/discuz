@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "default",
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "backgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "nui-navigation-bar": "/components/niceui/nui-navigation-bar/nui-navigation-bar"
+  }
+}

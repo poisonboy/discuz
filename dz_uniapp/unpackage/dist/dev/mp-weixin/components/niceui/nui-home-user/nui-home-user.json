@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "nui-headbg": "/components/niceui/nui-headbg/nui-headbg",
+    "nui-headinfo": "/components/niceui/nui-headinfo/nui-headinfo",
+    "nui-list-view": "/components/niceui/nui-list-view/nui-list-view",
+    "nui-list-cell": "/components/niceui/nui-list-cell/nui-list-cell",
+    "nui-icon": "/components/niceui/nui-icon/nui-icon",
+    "nui-tag": "/components/niceui/nui-tag/nui-tag",
+    "nui-footer": "/components/niceui/nui-footer/nui-footer"
+  },
+  "component": true
+}

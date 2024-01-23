@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "视频",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "nui-list-video": "/components/niceui/nui-list-video/nui-list-video"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": " ",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nui-headbg": "/components/niceui/nui-headbg/nui-headbg",
+    "nui-user-headinfo": "/components/niceui/nui-user-headinfo/nui-user-headinfo",
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "nui-list": "/components/niceui/nui-list/nui-list",
+    "nui-nomore": "/components/niceui/nui-nomore/nui-nomore"
+  }
+}

@@ -1,0 +1,1 @@
+<view><view class="nui-wall  " style="{{'height:'+(height+'px')+';'}}"><view class="wave"><view class="wave-a"></view><view class="wave-b"></view></view></view></view>

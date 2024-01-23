@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "用户协议",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html"
+  }
+}

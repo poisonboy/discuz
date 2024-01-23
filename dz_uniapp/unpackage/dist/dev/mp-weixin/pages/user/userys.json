@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "隐私政策",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html"
+  }
+}

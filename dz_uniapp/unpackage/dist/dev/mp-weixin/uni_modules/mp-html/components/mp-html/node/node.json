@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-audio": "/uni_modules/mp-html/components/mp-html/audio/audio",
+    "node": "/uni_modules/mp-html/components/mp-html/node/node"
+  }
+}

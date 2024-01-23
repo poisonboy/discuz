@@ -1,0 +1,1 @@
+<view class="nui-nomore-class nui-loadmore-none data-v-5ae48e2c"><view class="{{['data-v-5ae48e2c',isDot?'nui-nomore-dot':'nui-nomore']}}"><view class="{{['data-v-5ae48e2c',isDot?'nui-dot-text':'nui-nomore-text']}}" style="{{'background-color:'+(backgroundColor)+';'}}">{{isDot?dotText:text}}</view></view></view>

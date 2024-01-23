@@ -1,0 +1,42 @@
+
+.navigation-bar.data-v-19cf07ac {
+	width: 100%;
+	transition: opacity 0.4s;
+}
+.backdrop__filter.data-v-19cf07ac {
+	/* Safari for macOS & iOS */
+	-webkit-backdrop-filter: blur(15px);
+	/* Google Chrome */
+	backdrop-filter: blur(15px);
+}
+.navbar-fixed.data-v-19cf07ac {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.status-bar.data-v-19cf07ac {
+	width: 100%;
+}
+.navigation_bar-title.data-v-19cf07ac {
+	width: 100%;
+	font-size: 17px;
+	line-height: 17px;
+
+	font-weight: 500;
+
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bar-line.data-v-19cf07ac::after {
+	content: '';
+	position: absolute;
+	border-bottom: 1rpx solid #eaeef1;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+

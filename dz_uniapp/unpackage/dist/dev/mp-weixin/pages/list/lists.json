@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "频道",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "nui-list": "/components/niceui/nui-list/nui-list",
+    "nui-nomore": "/components/niceui/nui-nomore/nui-nomore"
+  }
+}

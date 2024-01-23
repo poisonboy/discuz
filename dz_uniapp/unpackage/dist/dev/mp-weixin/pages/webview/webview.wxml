@@ -1,0 +1,1 @@
+<view><nui-navigation-bar vue-id="9b069568-1" backgroundColor="var(--base)" isFixed="{{true}}" isOpacity="{{false}}" title="话题" bind:__l="__l"></nui-navigation-bar><web-view src="{{url}}"></web-view></view>

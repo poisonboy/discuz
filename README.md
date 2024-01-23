@@ -35,7 +35,9 @@
 ## 其他说明
 
 遇到问题请提issues，提issues我有时间会回 
+
 微信不接受任何咨询 也不做解答
+
 如有二次开发或解决bug请记得共享
 
 本程序二开自：https://github.com/Comsenz/Discuz-Api

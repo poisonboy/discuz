@@ -1,0 +1,1 @@
+<view class="nui-list-view nui-view-class data-v-45cf59e0" style="{{'background-color:'+(backgroundColor)+';'+('margin-top:'+(marginTop)+';')}}"><block wx:if="{{title}}"><view class="nui-list-title data-v-45cf59e0">{{title}}</view></block><view class="{{['nui-list-content','data-v-45cf59e0',unlined?'nui-border-'+unlined:'']}}"><slot></slot></view></view>

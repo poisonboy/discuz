@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "图库",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "nui-list": "/components/niceui/nui-list/nui-list"
+  }
+}

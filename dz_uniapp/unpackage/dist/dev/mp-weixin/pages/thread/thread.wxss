@@ -1,0 +1,567 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+page {
+  background: #f7f7f7;
+}
+.safearea-bottom {
+  width: 100%;
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}
+.emoji {
+  width: 22px !important;
+  height: 22px !important;
+  vertical-align: middle;
+}
+.tui-header-icon {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 12rpx;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 99999;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.top_follow {
+  /* float: right; */
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 6px;
+  color: #fff;
+  font-size: 12px;
+  /* margin-top: 3px; */
+  border-radius: 30px;
+  background: var(--base);
+}
+.top_box {
+  display: block;
+  position: absolute;
+  top: -40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 10px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 40px;
+  width: 600rpx;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.top_box .avatar {
+  float: left;
+  margin-right: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f7f7f7;
+}
+.top_box .avatar .img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.top_box .user {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  padding: 2px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.top_box .user .username {
+  float: left;
+  font-size: 14px;
+  color: #333;
+}
+.top_box .lever {
+  font-size: 12px;
+  color: #666;
+  height: 20px;
+  line-height: 20px;
+}
+.sub-left {
+  display: flex;
+}
+.replybox {
+  padding: 0 30rpx;
+}
+.replybox .rtitle {
+  color: #000;
+  font-weight: bold;
+}
+.replybox .textarea {
+  margin-top: 15rpx;
+}
+.replybox .textarea textarea {
+  height: 150rpx;
+  background: #ededed;
+  color: #999;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  width: calc(100% - 20rpx);
+}
+.replybox .btn {
+  background-color: rgba(var(--base-rgb), 1);
+  color: #fff;
+  margin-top: 20rpx;
+}
+.card {
+  margin: 13px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.container {
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
+ .md-p {
+  margin: 5px 0;
+}
+.header {
+  padding: 80rpx 90rpx 60rpx 90rpx;
+  box-sizing: border-box;
+}
+.file-body {
+  margin: 0 !important;
+}
+.title {
+  color: #333;
+  font-weight: 500;
+}
+.sub-title {
+  font-size: 24rpx;
+  color: #7a7a7a;
+  padding-top: 18rpx;
+}
+.title {
+  width: 100%;
+  padding: 50rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.header-bg {
+  width: 100%;
+  margin: 0;
+}
+.header-img {
+  width: 100%;
+  height: 440rpx;
+  display: block;
+}
+.header-icon {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 12rpx;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  z-index: 99999;
+  box-sizing: border-box;
+}
+.content-box {
+  width: 100%;
+  height: 44px;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.avatar-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaeef1;
+  flex-shrink: 0;
+}
+.avatar-box .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.search-box {
+  width: 100%;
+  height: 32px;
+  margin: 0 10rpx;
+  border-radius: 18px;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.mescroll-totop {
+  margin-bottom: 50px !important;
+}
+.bg-white {
+  background-color: #ffffff !important;
+}
+.search-text {
+  padding-left: 10rpx;
+}
+.notice-box {
+  position: relative;
+  flex-shrink: 0;
+  color: #fff;
+}
+video {
+  width: 100%;
+  height: 208px;
+}
+.video-body {
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  padding-bottom: 13px;
+}
+.video-body .post-note {
+  margin: 12px;
+}
+.video-body .news-title,
+.video-body .sub-info {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.video-body .news-content {
+  padding: 12px;
+}
+.body {
+  background-color: #ffffff;
+  padding: 13px;
+  margin: 0;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+}
+.bottom {
+  background-color: #ffffff;
+  padding: 13px;
+  margin: 13px;
+  border-radius: 12px;
+}
+.bottom .br {
+  height: 6px;
+  display: block;
+}
+.bottom ._blockquote,
+.bottom .blockquote {
+  font-size: 12px;
+  line-height: 14px;
+  border-left: 3px solid #78C0A8;
+  position: relative;
+  padding: 4px 8px;
+  background-color: #f7f7f7;
+}
+.bottom ._blockquote text,
+.bottom .blockquote text {
+  display: block;
+}
+.bottom ._blockquote::before,
+.bottom .blockquote::before {
+  content: "“";
+  color: #78C0A8;
+  font-size: 12px;
+  position: absolute;
+  left: 1px;
+  top: 4px;
+}
+.bottom .aaa,
+.bottom .bbb {
+  display: none;
+}
+.post-note {
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  color: #555;
+  border-color: #f8f9fa;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.news-title {
+  font-weight: 500;
+}
+.sub-info {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+  opacity: 0.6;
+}
+.author {
+  color: var(--base);
+  border-radius: 30px;
+  padding-left: 20rpx;
+}
+.news-content {
+  padding-top: 40rpx;
+}
+.article {
+  /* text-indent: 2em; */
+  padding-bottom: 13px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.article-pic {
+  width: 100%;
+  display: block;
+  margin-bottom: 40rpx;
+}
+.news-source {
+  font-size: 24rpx;
+  color: #999;
+}
+.operate-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60rpx 40rpx;
+  box-sizing: border-box;
+}
+.black {
+  color: #333;
+  padding-left: 12rpx;
+}
+.cmt-title {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 13px;
+}
+.cmt-title::after {
+  content: '';
+  position: absolute;
+  left: 0rpx;
+  top: 18%;
+  width: 6rpx;
+  height: 64%;
+  background: var(--base);
+}
+.cmtbox {
+  padding-bottom: 20rpx;
+}
+.cmt-cell {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 44rpx;
+}
+.avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  display: block;
+  flex-shrink: 0;
+}
+.cmt-detail {
+  width: 100%;
+  padding-left: 16rpx;
+  box-sizing: border-box;
+}
+.header-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cmt-nickname {
+  color: var(--base);
+}
+.cmt-comauth {
+  background: var(--base);
+  opacity: 0.9;
+}
+.cmt-comauths {
+  background: var(--base);
+  opacity: 0.6;
+}
+.cmt-comfirst {
+  opacity: 0.8;
+}
+.cmt-comauth,
+.cmt-comauths,
+.cmt-comfirst {
+  display: inline-block;
+  -webkit-text-size-adjust: none;
+  -webkit-transform: scale(0.83, 0.83);
+  margin-top: 1px;
+  margin-left: 4px;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 4px;
+  padding: 1px 4px;
+  text-align: left;
+  color: #fff;
+}
+.fabulous {
+  color: #9a9a9a;
+}
+.fabulous text {
+  padding-right: 4rpx;
+  font-size: 24rpx;
+}
+.cmt-content {
+  color: #333;
+  padding-top: 8rpx;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.cmt-content-image {
+  width: 150px;
+  height: 150px;
+}
+.reply-box {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 16rpx;
+  padding: 0 10px;
+  background-color: #f2f2f2;
+}
+.cell-last {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  color: var(--base);
+}
+.flex-1 {
+  flex: 1;
+  display: inline;
+}
+.reply-nickname {
+  color: #7a7a7a;
+  font-weight: 600;
+  padding-bottom: 8rpx;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  color: #9a9a9a;
+}
+.primary {
+  color: var(--base);
+}
+.ml {
+  margin-left: 16rpx;
+}
+.operation {
+  width: 100%;
+  height: 112rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 26rpx;
+  z-index: 99999;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.operation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-top: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.operation-left {
+  display: flex;
+  align-items: center;
+  width: 612rpx;
+  margin-left: 26rpx;
+}
+.operation-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.operation-item image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 500px;
+}
+.operation-right {
+  height: 112rpx;
+  box-sizing: border-box;
+  padding-top: 0;
+}
+.right-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-comment {
+  height: 64rpx;
+  width: 100%;
+  background: #ededed;
+  color: #999;
+  border-radius: 25px;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  padding-top: 0;
+}
+.share-btn {
+  display: block;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.nui-btn-box {
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+}
+.nui-bottom-text {
+  padding-top: 600px;
+  text-align: center;
+  font-size: 24rpx;
+  color: #7a7a7a;
+}
+

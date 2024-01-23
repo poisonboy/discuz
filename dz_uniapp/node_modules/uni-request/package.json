@@ -1,0 +1,23 @@
+{
+  "name": "uni-request",
+  "version": "1.0.2",
+  "description": "基于Promise封装uni-app的request方法,h5和小程序均可使用",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QzeroQ/uni-request.git"
+  },
+  "keywords": [
+    "uni-app",
+    "wechat",
+    "promise",
+    "htpp",
+    "微信小程序"
+  ],
+  "author": "tzone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QzeroQ/uni-request/issues"
+  },
+  "homepage": "https://github.com/QzeroQ/uni-request#readme"
+}

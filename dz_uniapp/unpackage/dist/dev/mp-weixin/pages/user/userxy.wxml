@@ -1,0 +1,1 @@
+<view class="card"><mp-html vue-id="fba83202-1" content="{{html}}" bind:__l="__l"></mp-html></view>

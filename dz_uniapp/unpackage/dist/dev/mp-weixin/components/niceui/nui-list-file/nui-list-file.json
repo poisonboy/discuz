@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nui-icon": "/components/niceui/nui-icon/nui-icon",
+    "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html",
+    "nui-file": "/components/niceui/nui-file/nui-file"
+  },
+  "component": true
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/comment/comment",
+    "pages/user/user",
+    "pages/webview/webview",
+    "pages/thread/thread",
+    "pages/list/list",
+    "pages/user/userxy",
+    "pages/user/userys",
+    "pages/find/find",
+    "pages/media/media",
+    "pages/media/video",
+    "pages/media/audio",
+    "pages/media/image",
+    "pages/media/file",
+    "pages/thread/reply",
+    "pages/list/lists",
+    "pages/topic/topic",
+    "pages/userlist/userlist"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#2f54eb",
+    "backgroundColor": "#2f54eb"
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "2.4.3",
+      "provider": "wxa75efa648b60994b"
+    }
+  },
+  "usingComponents": {
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

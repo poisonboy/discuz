@@ -1,0 +1,203 @@
+{
+
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": ""
+
+				// "navigationStyle": "custom"
+			},
+			"meta": {
+				"auth": false
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			},
+			"meta": {
+				"auth": false
+			}
+
+		}, {
+			"path": "pages/comment/comment",
+			"style": {
+				"navigationBarTitleText": "评论",
+				"enablePullDownRefresh": false
+			},
+			"meta": {
+				"auth": true
+			}
+
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": " ",
+				"enablePullDownRefresh": false
+
+			},
+			"meta": {
+				"auth": false
+			}
+
+		}, {
+			"path": "pages/webview/webview",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"backgroundColor": "#F8F8F8",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"type": "share"
+						}]
+					}
+				}
+			}
+
+		},
+		{
+			"path": "pages/thread/thread",
+			"style": {
+
+				"navigationBarTitleText": "帖子详情",
+				"enablePullDownRefresh": false 
+			 
+
+			}
+
+
+		},
+		{
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": false 
+			 
+			}
+
+		},
+		{
+			"path": "pages/user/userxy",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/user/userys",
+			"style": {
+				"navigationBarTitleText": "隐私政策",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/media/media",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/media/video",
+			"style": {
+				"navigationBarTitleText": "视频",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/media/audio",
+			"style": {
+				"navigationBarTitleText": "音频",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/media/image",
+			"style": {
+				"navigationBarTitleText": "图库",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/media/file",
+			"style": {
+				"navigationBarTitleText": "文件",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/thread/reply",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/list/lists",
+			"style": {
+				"navigationBarTitleText": "频道",
+				"enablePullDownRefresh": false 
+			}
+
+		},
+		{
+			"path": "pages/topic/topic",
+			"style": {
+				"navigationBarTitleText": "话题",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/userlist/userlist",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"nui-(.*)": "@/components/niceui/nui-$1/nui-$1.vue"
+		}
+	},
+
+
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#2f54eb",
+		// #ifdef MP-WEIXIN
+		
+		"usingComponents": {
+			"txv-video": "plugin://tencentvideo/video"
+		},
+		// #endif 
+		"backgroundColor": "#2f54eb"
+		
+
+	}
+
+
+}
